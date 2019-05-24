@@ -1,5 +1,3 @@
-import Character from './domain';
-
 const compareCharacters = (a, b) => {
   if (a.health > b.health) {
     return -1;
