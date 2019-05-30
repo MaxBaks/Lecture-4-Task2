@@ -1,4 +1,4 @@
-import compareCharacters from '../js/app';
+import sortCharacters from '../js/app';
 import Character from '../js/domain';
 
 test('characters should be sorted by health', () => {
@@ -14,7 +14,7 @@ test('characters should be sorted by health', () => {
     new Character('мечник', 10),
   ];
 
-  const result = characters.sort(compareCharacters);
+  const result = sortCharacters(characters);
 
   expect(result).toEqual(expectedCharacters);
 });
@@ -30,7 +30,7 @@ test('characters should be sorted by name when healths are equal', () => {
     new Character('мечник', 10),
   ];
 
-  const result = characters.sort(compareCharacters);
+  const result = sortCharacters(characters);
 
   expect(result).toEqual(expectedCharacters);
 });
